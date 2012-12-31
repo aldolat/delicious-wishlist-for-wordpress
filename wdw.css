@@ -1,0 +1,142 @@
+/*
+	WordPress Plugin: Delicious Wishlist for WordPress 2.4
+
+	Stylesheet file wdw.css
+
+	Copyright (C) 2009, 2011  Aldo Latino  (email : aldolat@gmail.com)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+*/
+
+.wishlist-title-high, .wishlist-title-medium, .wishlist-title-low {
+	margin-bottom: 15px;
+}
+
+ul.wishlist {
+	list-style-type: none;
+	margin-bottom: 20px;
+	margin-left: 0;
+	padding: 0;
+}
+
+ul.wishlist p {
+	margin-bottom: 0 !important;
+}
+
+p.wishlist-timestamp, p.wishlist-tags, p.wishlist-section {
+/*
+	display: inline;
+	float: left;
+	margin-right: 10px;
+*/
+}
+
+p.wishlist-timestamp, p.wishlist-tags, p.wishlist-section, .wdw-qty {
+	font-size: 0.8em;
+}
+
+.wdw_widget p.wishlist-timestamp, .wdw_widget p.wishlist-tags,
+.wdw_widget p.wishlist-section {
+	border: 0 none;
+	display: block;
+	float: none;
+	margin-right: 0;
+}
+
+p.wishlist-description, p.wishlist-timestamp, p.wishlist-tags, p.wishlist-section {
+	margin-top: 5px;
+}
+
+p.wishlist-description {
+
+}
+
+ul.wishlist li {
+	margin: 0 0 15px !important;
+	overflow: hidden;
+	padding: 0 0 0 55px !important;
+	text-indent: 0; /* for Default WordPress theme */
+}
+
+ul.wishlist li.high-stars {
+	background: transparent url('images/wdw-stars-high.png') no-repeat 0 1px;
+}
+
+ul.wishlist li.high-faces {
+	background: transparent url('images/wdw-faces-high.png') no-repeat 0 2px;
+}
+
+ul.wishlist li.medium-stars {
+	background: transparent url('images/wdw-stars-medium.png') no-repeat 0 1px;
+}
+
+ul.wishlist li.medium-faces {
+	background: transparent url('images/wdw-faces-medium.png') no-repeat 0 2px;
+}
+
+ul.wishlist li.low-stars {
+	background: transparent url('images/wdw-stars-low.png') no-repeat 0 1px;
+}
+
+ul.wishlist li.low-faces {
+	background: transparent url('images/wdw-faces-low.png') no-repeat 0 2px;
+}
+
+ul.wishlist li.high-stars:before,
+ul.wishlist li.high-faces:before,
+ul.wishlist li.medium-stars:before,
+ul.wishlist li.medium-faces:before,
+ul.wishlist li.low-stars:before,
+ul.wishlist li.low-faces:before { /* for Default WordPress theme */
+	content: "";
+}
+
+ul.wishlist li.high-stars:last-child,
+ul.wishlist li.high-faces:last-child,
+ul.wishlist li.medium-stars:last-child,
+ul.wishlist li.medium-faces:last-child,
+ul.wishlist li.low-stars:last-child,
+ul.wishlist li.low-faces:last-child {
+	margin-bottom: 0;
+	overflow: hidden;
+}
+
+.wishlist-timestamp abbr {
+	cursor: help;
+}
+
+a.wishlist-tag {
+	font-size: 0.8em;
+	font-weight: normal;
+	letter-spacing: 0.09em;
+	text-transform: uppercase;
+}
+
+.wdw_backlink {
+	font-size: 0.8em;
+}
+
+/*
+********* Sidebar Area ****************/
+
+.widget-area ul.wishlist {
+	margin-left: 0 !important;
+}
+
+.widget-area ul.wishlist li {
+	background: none !important;
+	padding-left: 0 !important;
+}
+
