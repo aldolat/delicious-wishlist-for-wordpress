@@ -3,8 +3,8 @@ Contributors: aldolat
 Donate link: http://www.aldolat.it/wordpress/wordpress-plugins/delicious-wishlist-for-wordpress/
 Tags: delicious, del.icio.us, wishlist, bookmarks
 Requires at least: 3.0
-Tested up to: 3.4.2
-Stable tag: 2.5
+Tested up to: 3.5
+Stable tag: 2.6
 
 Adds a Wishlist page to your WordPress blog using your Delicious Bookmarks.
 
@@ -51,6 +51,12 @@ In this way, you can change the look of your wishlist page and you'll preserve i
 3. The rendered wishlist page
 
 == Changelog ==
+
+= 2.6 =
+
+* Localized date format
+* Removed check and conversion for old settings
+* Small code fixings
 
 = 2.5 =
 

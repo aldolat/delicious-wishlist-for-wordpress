@@ -1,182 +1,170 @@
-# Copyright (C) 2012 Delicious Wishlist for WordPress
+# Copyright (C) 2013 Delicious Wishlist for WordPress
 # This file is distributed under the same license as the Delicious Wishlist for WordPress package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Delicious Wishlist for WordPress 2.5\n"
+"Project-Id-Version: Delicious Wishlist for WordPress 2.6\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/delicious-wishlist-for-"
 "wordpress\n"
-"POT-Creation-Date: 2012-09-30 10:30:42+00:00\n"
+"POT-Creation-Date: 2013-01-12 17:22:56+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2012-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2013-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: delicious-wishlist-for-wordpress.php:94
+#: delicious-wishlist-for-wordpress.php:51
 msgid ""
 "Delicious Wishlist for WordPress needs some settings on its <a href=\"%s"
 "\">options</a> page."
 msgstr ""
 
-#: delicious-wishlist-for-wordpress.php:114
+#: delicious-wishlist-for-wordpress.php:71
 msgid "Settings"
 msgstr ""
 
-#: delicious-wishlist-for-wordpress.php:247
+#: delicious-wishlist-for-wordpress.php:204
 msgid ""
 "There was a problem fetching your feed for <strong>%1$s</strong>:<br />"
 "%2$s<br />The problem is:<br />%3$s"
 msgstr ""
 
-#: delicious-wishlist-for-wordpress.php:295
-#: delicious-wishlist-for-wordpress.php:309
+#: delicious-wishlist-for-wordpress.php:236
+#: delicious-wishlist-for-wordpress.php:250
 msgid "I need"
 msgstr ""
 
-#: delicious-wishlist-for-wordpress.php:303
+#: delicious-wishlist-for-wordpress.php:244
 msgid " <span class=\"wdw-qty\">(%s item)</span>"
 msgid_plural " <span class=\"wdw-qty\">(%s items)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: delicious-wishlist-for-wordpress.php:322
+#: delicious-wishlist-for-wordpress.php:263
 msgid "Nothing in this moment."
 msgstr ""
 
-#: delicious-wishlist-for-wordpress.php:339
+#: delicious-wishlist-for-wordpress.php:280
 msgid "Continue"
 msgstr ""
 
-#: delicious-wishlist-for-wordpress.php:340
+#: delicious-wishlist-for-wordpress.php:281
 msgid "Continue reading &laquo;%s&raquo;"
 msgstr ""
 
-#: delicious-wishlist-for-wordpress.php:350
-msgid "%m/%d/%Y"
+#: delicious-wishlist-for-wordpress.php:295
+msgid "See the bookmark on Delicious (stored %s ago)"
 msgstr ""
 
-#: delicious-wishlist-for-wordpress.php:353
-msgid "Stored on %A, %m/%d/%Y at %T"
-msgstr ""
-
-#: delicious-wishlist-for-wordpress.php:355
-msgid "%s ago"
-msgstr ""
-
-#: delicious-wishlist-for-wordpress.php:363
-msgid "See the bookmark &laquo;%s&raquo; on Delicious - %2$s"
-msgstr ""
-
-#: delicious-wishlist-for-wordpress.php:403
+#: delicious-wishlist-for-wordpress.php:338
 msgid "See all my bookmarks tagged &laquo;%s&raquo;"
 msgstr ""
 
-#: delicious-wishlist-for-wordpress.php:496
+#: delicious-wishlist-for-wordpress.php:431
 msgid ""
 "You have not properly configured the plugin. Please, setup it in the "
 "%1$splugin panel%2$s, filling in all the required fields."
 msgstr ""
 
-#: delicious-wishlist-for-wordpress.php:656
+#: delicious-wishlist-for-wordpress.php:591
 msgid "Check out %1$smy complete list%2$s."
 msgstr ""
 
-#: delicious-wishlist-for-wordpress.php:665
+#: delicious-wishlist-for-wordpress.php:600
 msgid "Created using"
 msgstr ""
 
-#. #-#-#-#-#  wp-delicious-wishlist.pot (Delicious Wishlist for WordPress 2.5)  #-#-#-#-#
+#. #-#-#-#-#  wp-delicious-wishlist.pot (Delicious Wishlist for WordPress 2.6)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
-#: delicious-wishlist-for-wordpress.php:667
+#: delicious-wishlist-for-wordpress.php:602
 msgid "Delicious Wishlist for WordPress"
 msgstr ""
 
-#: delicious-wishlist-for-wordpress.php:703
+#: delicious-wishlist-for-wordpress.php:638
 msgid "Your personal wishlist proudly powered by Delicious"
 msgstr ""
 
-#: delicious-wishlist-for-wordpress.php:705
+#: delicious-wishlist-for-wordpress.php:640
 msgid "Delicious Wishlist Widget"
 msgstr ""
 
-#: delicious-wishlist-for-wordpress.php:761
+#: delicious-wishlist-for-wordpress.php:696
 msgid "My Wishlist"
 msgstr ""
 
-#: delicious-wishlist-for-wordpress.php:786
+#: delicious-wishlist-for-wordpress.php:721
 msgid "Title:"
 msgstr ""
 
-#: delicious-wishlist-for-wordpress.php:792
+#: delicious-wishlist-for-wordpress.php:727
 msgid "Maximum number of items per section (100 max):"
 msgstr ""
 
-#: delicious-wishlist-for-wordpress.php:798
+#: delicious-wishlist-for-wordpress.php:733
 msgid "Insert the title of your Wishlist page:"
 msgstr ""
 
-#: delicious-wishlist-for-wordpress.php:805
+#: delicious-wishlist-for-wordpress.php:740
 msgid "Display description"
 msgstr ""
 
-#: delicious-wishlist-for-wordpress.php:811
+#: delicious-wishlist-for-wordpress.php:746
 msgid "Display the subtitles"
 msgstr ""
 
-#: delicious-wishlist-for-wordpress.php:817
+#: delicious-wishlist-for-wordpress.php:752
 msgid "Display the total number of items in titles"
 msgstr ""
 
-#: delicious-wishlist-for-wordpress.php:822
+#: delicious-wishlist-for-wordpress.php:757
 msgid "Choose the HTML element for subtitles:"
 msgstr ""
 
-#: delicious-wishlist-for-wordpress.php:826 wdw-options.php:264
+#: delicious-wishlist-for-wordpress.php:761 wdw-options.php:264
 msgid "H1"
 msgstr ""
 
-#: delicious-wishlist-for-wordpress.php:829 wdw-options.php:267
+#: delicious-wishlist-for-wordpress.php:764 wdw-options.php:267
 msgid "H2"
 msgstr ""
 
-#: delicious-wishlist-for-wordpress.php:832 wdw-options.php:270
+#: delicious-wishlist-for-wordpress.php:767 wdw-options.php:270
 msgid "H3"
 msgstr ""
 
-#: delicious-wishlist-for-wordpress.php:835 wdw-options.php:273
+#: delicious-wishlist-for-wordpress.php:770 wdw-options.php:273
 msgid "H4"
 msgstr ""
 
-#: delicious-wishlist-for-wordpress.php:838 wdw-options.php:276
+#: delicious-wishlist-for-wordpress.php:773 wdw-options.php:276
 msgid "H5"
 msgstr ""
 
-#: delicious-wishlist-for-wordpress.php:841 wdw-options.php:279
+#: delicious-wishlist-for-wordpress.php:776 wdw-options.php:279
 msgid "DIV"
 msgstr ""
 
-#: delicious-wishlist-for-wordpress.php:844 wdw-options.php:282
+#: delicious-wishlist-for-wordpress.php:779 wdw-options.php:282
 msgid "SPAN"
 msgstr ""
 
-#: delicious-wishlist-for-wordpress.php:851
+#: delicious-wishlist-for-wordpress.php:786
 msgid "Pick up random items"
 msgstr ""
 
-#: delicious-wishlist-for-wordpress.php:857 wdw-options.php:353
+#: delicious-wishlist-for-wordpress.php:792 wdw-options.php:353
 msgid "Display date"
 msgstr ""
 
-#: delicious-wishlist-for-wordpress.php:863
+#: delicious-wishlist-for-wordpress.php:798
 msgid "Display tags"
 msgstr ""
 
-#: delicious-wishlist-for-wordpress.php:869
+#: delicious-wishlist-for-wordpress.php:804
 msgid "Display section"
 msgstr ""
 
-#: delicious-wishlist-for-wordpress.php:875 wdw-options.php:329
+#: delicious-wishlist-for-wordpress.php:810 wdw-options.php:329
 msgid "Link to the author"
 msgstr ""
 
