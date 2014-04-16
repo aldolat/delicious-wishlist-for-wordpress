@@ -2,7 +2,7 @@
 /*
 	Plugin Name: Delicious Wishlist for WordPress
 	Description:  Publish a wishlist using your Delicious bookmarks
-	Plugin URI: http://www.aldolat.it/wordpress/wordpress-plugins/delicious-wishlist-for-wordpress/
+	Plugin URI: http://dev.aldolat.it/projects/delicious-wishlist-for-wordpress/
 	Author: Aldo Latino
 	Author URI: http://www.aldolat.it/
 	Version: 2.6

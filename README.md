@@ -1,6 +1,6 @@
 # Delicious Wishlist for WordPress #
 **Contributors:** aldolat  
-**Donate link:** http://www.aldolat.it/wordpress/wordpress-plugins/delicious-wishlist-for-wordpress/  
+**Donate link:** http://dev.aldolat.it/projects/delicious-wishlist-for-wordpress/  
 **Tags:** delicious, del.icio.us, wishlist, bookmarks  
 **Requires at least:** 3.0  
 **Tested up to:** 3.5  
