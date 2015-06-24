@@ -4,7 +4,7 @@
 **Tags:** delicious, del.icio.us, wishlist, bookmarks  
 **Requires at least:** 3.0  
 **Tested up to:** 4.1  
-**Stable tag:** 2.6  
+**Stable tag:** 2.6.1  
 
 Adds a Wishlist page to your WordPress blog using your Delicious Bookmarks.
 
@@ -47,16 +47,20 @@ In this way, you can change the look of your wishlist page and you'll preserve i
 ## Screenshots ##
 
 ### 1. The settings panel of the plugin ###
-![1. The settings panel of the plugin](http://s.wordpress.org/extend/plugins/delicious-wishlist-for-wordpress/screenshot-1.png)
+![1. The settings panel of the plugin](http://ps.w.org/delicious-wishlist-for-wordpress/assets/screenshot-1.png)
 
 ### 2. The settings for the widget ###
-![2. The settings for the widget](http://s.wordpress.org/extend/plugins/delicious-wishlist-for-wordpress/screenshot-2.png)
+![2. The settings for the widget](http://ps.w.org/delicious-wishlist-for-wordpress/assets/screenshot-2.png)
 
 ### 3. The rendered wishlist page ###
-![3. The rendered wishlist page](http://s.wordpress.org/extend/plugins/delicious-wishlist-for-wordpress/screenshot-3.png)
+![3. The rendered wishlist page](http://ps.w.org/delicious-wishlist-for-wordpress/assets/screenshot-3.png)
 
 
 ## Changelog ##
+
+### 2.6.1 ###
+
+* Resolved an issue with a WordPress theme (props by mezinster).
 
 ### 2.6 ###
 

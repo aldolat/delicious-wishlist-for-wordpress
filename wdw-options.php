@@ -77,7 +77,9 @@ function wdw_options_page() { ?>
 			<?php printf( __( 'You are running the version %s of this plugin.', 'wp-delicious-wishlist' ), WDW_VERSION ); ?>
 		</p>
 
-		<div class="clear" id="poststuff" style="width: 830px;">
+		<div class="clear"></div>
+
+		<div id="poststuff" style="width: 830px;">
 
 			<div style="float: right; width: 255px;">
 

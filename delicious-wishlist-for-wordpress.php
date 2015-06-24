@@ -5,7 +5,7 @@
 	Plugin URI: http://dev.aldolat.it/projects/delicious-wishlist-for-wordpress/
 	Author: Aldo Latino
 	Author URI: http://www.aldolat.it/
-	Version: 2.6
+	Version: 2.6.1
 	License: GPLv3 or later
 */
 
@@ -26,7 +26,7 @@
     along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-define( 'WDW_VERSION', '2.6' );
+define( 'WDW_VERSION', '2.6.1' );
 
 /**
  * Preliminary actions for creating the settings group into the database
