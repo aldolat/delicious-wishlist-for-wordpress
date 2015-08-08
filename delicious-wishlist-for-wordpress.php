@@ -5,7 +5,7 @@
 	Plugin URI: http://dev.aldolat.it/projects/delicious-wishlist-for-wordpress/
 	Author: Aldo Latino
 	Author URI: http://www.aldolat.it/
-	Version: 2.6.1
+	Version: 2.6.2
 	License: GPLv3 or later
 */
 
@@ -26,7 +26,7 @@
     along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-define( 'WDW_VERSION', '2.6.1' );
+define( 'WDW_VERSION', '2.6.2' );
 
 /**
  * Preliminary actions for creating the settings group into the database
@@ -632,15 +632,20 @@ function wdw_load_widget() {
 }
 
 class WDW_Widget extends WP_Widget {
-	function WDW_Widget() {
+	public function WDW_Widget() {
 		$widget_ops = array(
 			'classname'   => 'wdw_widget',
 			'description' => __( 'Your personal wishlist proudly powered by Delicious', 'wp-delicious-wishlist' )
 		);
-		$this->WP_Widget( 'wdw-widget', __('Delicious Wishlist Widget', 'wp-delicious-wishlist'), $widget_ops );
+
+		parent::__construct(
+			'wdw-widget',
+			__('Delicious Wishlist Widget', 'wp-delicious-wishlist'),
+			$widget_ops
+		);
 	}
 
-	function widget( $args, $instance ) {
+	public function widget( $args, $instance ) {
 		extract( $args );
 
 		$title              = apply_filters('widget_title', $instance['title']);
@@ -674,7 +679,7 @@ class WDW_Widget extends WP_Widget {
 		echo $after_widget;
 	}
 
-	function update($new_instance, $old_instance) {
+	public function update($new_instance, $old_instance) {
 		$instance = $old_instance;
 		$instance['title']     = strip_tags($new_instance['title']);
 		$instance['maxitems']  = strip_tags($new_instance['maxitems']);
@@ -691,7 +696,7 @@ class WDW_Widget extends WP_Widget {
 		return $instance;
 	}
 
-	function form($instance) {
+	public function form($instance) {
 		$defaults = array(
 			'title'     => __( 'My Wishlist', 'wp-delicious-wishlist' ),
 			'maxitems'  => 1,
