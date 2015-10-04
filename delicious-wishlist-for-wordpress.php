@@ -6,6 +6,8 @@
 	Author: Aldo Latino
 	Author URI: http://www.aldolat.it/
 	Version: 2.6.2
+	Text Domain: delicious-wishlist-for-wordpress
+	Domain Path: /languages/
 	License: GPLv3 or later
 */
 
@@ -48,7 +50,7 @@ function wdw_init() {
 		empty( $wdws['wdw_delicious_tag_medium']   ) ||
 		empty( $wdws['wdw_delicious_tag_low']      )
 	) {
-		add_action( 'admin_notices', create_function( '', "echo '<div class=\"updated\"><p>" . sprintf( __( 'Delicious Wishlist for WordPress needs some settings on its <a href="%s">options</a> page.', 'wp-delicious-wishlist' ), admin_url( 'options-general.php?page=wdw-options' ) )."</p></div>';" ) );
+		add_action( 'admin_notices', create_function( '', "echo '<div class=\"updated\"><p>" . sprintf( __( 'Delicious Wishlist for WordPress needs some settings on its <a href="%s">options</a> page.', 'delicious-wishlist-for-wordpress' ), admin_url( 'options-general.php?page=wdw-options' ) )."</p></div>';" ) );
 	}
 }
 
@@ -68,7 +70,7 @@ function wdw_settings_link( $links, $file ) {
 		$this_plugin = plugin_basename( __FILE__ );
 
 	if ( $file == $this_plugin )
-		$links[] = '<a href="' . admin_url( 'options-general.php?page=wdw-options' ) . '">' . __( 'Settings', 'wp-delicious-wishlist' ) . '</a>';
+		$links[] = '<a href="' . admin_url( 'options-general.php?page=wdw-options' ) . '">' . __( 'Settings', 'delicious-wishlist-for-wordpress' ) . '</a>';
 
 	return $links;
 }
@@ -233,7 +235,7 @@ function wdw_fetch_bookmarks( $args ) {
 				if ( $wdw_title ) {
 					$wdw_wishlist .= $wdw_title;
 				} else {
-					$wdw_wishlist .= __( 'I need', 'wp-delicious-wishlist' );
+					$wdw_wishlist .= __( 'I need', 'delicious-wishlist-for-wordpress' );
 				}
 			$wdw_wishlist .= '</' . $wdw_title_element . '>';
 		} else {
@@ -241,13 +243,13 @@ function wdw_fetch_bookmarks( $args ) {
 				$wdw_wishlist = '<' . $widget_element . ' class="' . $title_class . '">';
 					// if outside the loop (in the widget), add the number of total items for the section
 					if ( $widget_count ) {
-						$qty_for_widget = sprintf( _n( ' <span class="wdw-qty">(%s item)</span>', ' <span class="wdw-qty">(%s items)</span>', $num_items, 'wp-delicious-wishlist' ), $num_items );
+						$qty_for_widget = sprintf( _n( ' <span class="wdw-qty">(%s item)</span>', ' <span class="wdw-qty">(%s items)</span>', $num_items, 'delicious-wishlist-for-wordpress' ), $num_items );
 					}
 					if ( ! isset( $qty_for_widget ) ) $qty_for_widget = '';
 					if ( $wdw_title ) {
 						$wdw_wishlist .= $wdw_title . $qty_for_widget;
 					} else {
-						$wdw_wishlist .= __( 'I need', 'wp-delicious-wishlist' ) . $qty_for_widget;
+						$wdw_wishlist .= __( 'I need', 'delicious-wishlist-for-wordpress' ) . $qty_for_widget;
 					}
 				$wdw_wishlist .= '</' . $widget_element . '>';
 			}
@@ -260,7 +262,7 @@ function wdw_fetch_bookmarks( $args ) {
 		}
 			// If the first (high) section is blank, then let's write "Nothing in this moment."...
 			if ( empty( $wdw_items ) ) {
-				$wdw_wishlist .= '<li class="' . $list_class . '-' . $wdw_icons . '">' . __( 'Nothing in this moment.', 'wp-delicious-wishlist' ) . '</li>';
+				$wdw_wishlist .= '<li class="' . $list_class . '-' . $wdw_icons . '">' . __( 'Nothing in this moment.', 'delicious-wishlist-for-wordpress' ) . '</li>';
 			} else {
 				// ... else start the loop
 
@@ -277,8 +279,8 @@ function wdw_fetch_bookmarks( $args ) {
 							$desc = $wdw_item->get_description();
 							if ( $desc ) {
 								if ( $wdw_truncate != 0 && strlen( $desc ) > $wdw_truncate ) {
-									if ( ! $wdw_more ) $wdw_more = __( 'Continue', 'wp-delicious-wishlist' );
-									$desc = substr( $desc, 0, $wdw_truncate ) . '&hellip; <a href="' . $bookmark_url . '" title="' . sprintf( __( 'Continue reading &laquo;%s&raquo;', 'wp-delicious-wishlist' ), $wdw_item->get_title() ) . ' on Delicious">' . $wdw_more . '</a>';
+									if ( ! $wdw_more ) $wdw_more = __( 'Continue', 'delicious-wishlist-for-wordpress' );
+									$desc = substr( $desc, 0, $wdw_truncate ) . '&hellip; <a href="' . $bookmark_url . '" title="' . sprintf( __( 'Continue reading &laquo;%s&raquo;', 'delicious-wishlist-for-wordpress' ), $wdw_item->get_title() ) . ' on Delicious">' . $wdw_more . '</a>';
 								}
 								$wdw_wishlist .= '<p class="wishlist-description">' . $desc . '</p>';
 							}
@@ -292,7 +294,7 @@ function wdw_fetch_bookmarks( $args ) {
 							// This is the difference in days
 							$diff_date = human_time_diff( $unix_date );
 							// Construct the title for the <a> element
-							$a_title = sprintf( __( 'See the bookmark on Delicious (stored %s ago)', 'wp-delicious-wishlist' ), $diff_date );
+							$a_title = sprintf( __( 'See the bookmark on Delicious (stored %s ago)', 'delicious-wishlist-for-wordpress' ), $diff_date );
 							// Let's build the final line
 							$wdw_wishlist .= '<p class="wishlist-timestamp">
 								<span class="wishlist-pre-date">' . $wdw_pre_date . '</span>
@@ -335,7 +337,7 @@ function wdw_fetch_bookmarks( $args ) {
 								$all_tags = '';
 								// This is the final loop for our Wishlist
 								foreach( $mytags as $mytag ) {
-									$all_tags .= $wdw_pre_tag . '<a class="wishlist-tag" title="' . sprintf( __( 'See all my bookmarks tagged &laquo;%s&raquo;', 'wp-delicious-wishlist' ), $mytag ) . '" href="' . $myurl . $mytag . '">' . $mytag . '</a>' . $wdw_tag_sep;
+									$all_tags .= $wdw_pre_tag . '<a class="wishlist-tag" title="' . sprintf( __( 'See all my bookmarks tagged &laquo;%s&raquo;', 'delicious-wishlist-for-wordpress' ), $mytag ) . '" href="' . $myurl . $mytag . '">' . $mytag . '</a>' . $wdw_tag_sep;
 								}
 								// Remove the trailing tag separator
 								$all_tags = substr( $all_tags, 0, -( strlen( $wdw_tag_sep ) ) );
@@ -428,7 +430,7 @@ function wp_delicious_wishlist(
 		// if blank, print this
 		$wdw_warning  = '<p class="wdw_warning">';
 		$wdw_warning .= sprintf(
-			__( 'You have not properly configured the plugin. Please, setup it in the %1$splugin panel%2$s, filling in all the required fields.', 'wp-delicious-wishlist' ),
+			__( 'You have not properly configured the plugin. Please, setup it in the %1$splugin panel%2$s, filling in all the required fields.', 'delicious-wishlist-for-wordpress' ),
 			'<a href="' . admin_url( 'options-general.php?page=wdw-options' ) . '">',
 			'</a>'
 		);
@@ -588,7 +590,7 @@ function wp_delicious_wishlist(
 					$wdw_page_link = get_page_link( $wishlist_page->ID );
 					if ( $wishlist_page->post_status == 'publish' ) {
 						$wdw_wishlist_page = '<p class="wdw-page">';
-						$wdw_wishlist_page .= sprintf( __( 'Check out %1$smy complete list%2$s.', 'wp-delicious-wishlist' ), '<a href="'.$wdw_page_link.'">', '</a>' );
+						$wdw_wishlist_page .= sprintf( __( 'Check out %1$smy complete list%2$s.', 'delicious-wishlist-for-wordpress' ), '<a href="'.$wdw_page_link.'">', '</a>' );
 						$wdw_wishlist_page .= '</p>';
 					}
 				}
@@ -597,9 +599,9 @@ function wp_delicious_wishlist(
 		
 		if ( ( in_the_loop() && $wdw_backlink ) || ( ! in_the_loop() && $widget_backlink ) ) {
 			$wdw_credits = '<p class="wdw_backlink">'
-			. __( 'Created using', 'wp-delicious-wishlist' )
+			. __( 'Created using', 'delicious-wishlist-for-wordpress' )
 			. ' <a href="http://wordpress.org/extend/plugins/delicious-wishlist-for-wordpress/">'
-			. __( 'Delicious Wishlist for WordPress', 'wp-delicious-wishlist') . '</a> ' . WDW_VERSION . '.</p>';
+			. __( 'Delicious Wishlist for WordPress', 'delicious-wishlist-for-wordpress') . '</a> ' . WDW_VERSION . '.</p>';
 		}
 
 	}
@@ -635,12 +637,12 @@ class WDW_Widget extends WP_Widget {
 	public function WDW_Widget() {
 		$widget_ops = array(
 			'classname'   => 'wdw_widget',
-			'description' => __( 'Your personal wishlist proudly powered by Delicious', 'wp-delicious-wishlist' )
+			'description' => __( 'Your personal wishlist proudly powered by Delicious', 'delicious-wishlist-for-wordpress' )
 		);
 
 		parent::__construct(
 			'wdw-widget',
-			__('Delicious Wishlist Widget', 'wp-delicious-wishlist'),
+			__('Delicious Wishlist Widget', 'delicious-wishlist-for-wordpress'),
 			$widget_ops
 		);
 	}
@@ -698,7 +700,7 @@ class WDW_Widget extends WP_Widget {
 
 	public function form($instance) {
 		$defaults = array(
-			'title'     => __( 'My Wishlist', 'wp-delicious-wishlist' ),
+			'title'     => __( 'My Wishlist', 'delicious-wishlist-for-wordpress' ),
 			'maxitems'  => 1,
 			'desc'      => false,
 			'page'      => '',
@@ -723,96 +725,96 @@ class WDW_Widget extends WP_Widget {
 		?>
 			<p>
 				<label for="<?php echo $this->get_field_id('title'); ?>">
-					<?php _e('Title:', 'wp-delicious-wishlist'); ?>
+					<?php _e('Title:', 'delicious-wishlist-for-wordpress'); ?>
 				</label>
 				<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr( $instance['title'] ); ?>" />
 			</p>
 			<p>
 				<label for="<?php echo $this->get_field_id('maxitems'); ?>">
-					<?php _e('Maximum number of items per section (100 max):', 'wp-delicious-wishlist'); ?>
+					<?php _e('Maximum number of items per section (100 max):', 'delicious-wishlist-for-wordpress'); ?>
 				</label>
 				<input class="widefat" id="<?php echo $this->get_field_id('maxitems'); ?>" name="<?php echo $this->get_field_name('maxitems'); ?>" type="text" value="<?php echo esc_attr( $instance['maxitems'] ); ?>" />
 			</p>
 			<p>
 				<label for="<?php echo $this->get_field_id('page'); ?>">
-					<?php _e('Insert the title of your Wishlist page:', 'wp-delicious-wishlist'); ?>
+					<?php _e('Insert the title of your Wishlist page:', 'delicious-wishlist-for-wordpress'); ?>
 				</label>
 				<input class="widefat" id="<?php echo $this->get_field_id('page'); ?>" name="<?php echo $this->get_field_name('page'); ?>" type="text" value="<?php echo esc_attr( $instance['page'] ); ?>" />
 			</p>
 			<p>
 				<input class="checkbox" type="checkbox" <?php checked( $desc ); ?> value="1" id="<?php echo $this->get_field_id( 'desc' ); ?>" name="<?php echo $this->get_field_name( 'desc' ); ?>" />
 				<label for="<?php echo $this->get_field_id( 'desc' ); ?>">
-					<?php _e('Display description', 'wp-delicious-wishlist'); ?>
+					<?php _e('Display description', 'delicious-wishlist-for-wordpress'); ?>
 				</label>
 			</p>
 			<p>
 				<input class="checkbox" type="checkbox" <?php checked( $subtitles ); ?> value="1" id="<?php echo $this->get_field_id( 'subtitles' ); ?>" name="<?php echo $this->get_field_name( 'subtitles' ); ?>" />
 				<label for="<?php echo $this->get_field_id( 'subtitles' ); ?>">
-					<?php _e('Display the subtitles', 'wp-delicious-wishlist'); ?>
+					<?php _e('Display the subtitles', 'delicious-wishlist-for-wordpress'); ?>
 				</label>
 			</p>
 			<p>
 				<input class="checkbox" type="checkbox" <?php checked( $count ); ?> value="1" id="<?php echo $this->get_field_id( 'count' ); ?>" name="<?php echo $this->get_field_name( 'count' ); ?>" />
 				<label for="<?php echo $this->get_field_id( 'count' ); ?>">
-					<?php _e('Display the total number of items in titles', 'wp-delicious-wishlist'); ?>
+					<?php _e('Display the total number of items in titles', 'delicious-wishlist-for-wordpress'); ?>
 				</label>
 			</p>
 			<p>
 				<label for="<?php echo $this->get_field_id('element'); ?>">
-					<?php _e( 'Choose the HTML element for subtitles:', 'wp-delicious-wishlist' ); ?>
+					<?php _e( 'Choose the HTML element for subtitles:', 'delicious-wishlist-for-wordpress' ); ?>
 				</label>
 				<select name="<?php echo $this->get_field_name('element'); ?>" >
 					<option <?php selected( 'h1', $instance['element']); ?> value="h1">
-						<?php _e( 'H1', 'wp-delicious-wishlist' ); ?>
+						<?php _e( 'H1', 'delicious-wishlist-for-wordpress' ); ?>
 					</option>
 					<option <?php selected( 'h2', $instance['element']); ?> value="h2">
-						<?php _e( 'H2', 'wp-delicious-wishlist' ); ?>
+						<?php _e( 'H2', 'delicious-wishlist-for-wordpress' ); ?>
 					</option>
 					<option <?php selected( 'h3', $instance['element']); ?> value="h3">
-						<?php _e( 'H3', 'wp-delicious-wishlist' ); ?>
+						<?php _e( 'H3', 'delicious-wishlist-for-wordpress' ); ?>
 					</option>
 					<option <?php selected( 'h4', $instance['element']); ?> value="h4">
-						<?php _e( 'H4', 'wp-delicious-wishlist' ); ?>
+						<?php _e( 'H4', 'delicious-wishlist-for-wordpress' ); ?>
 					</option>
 					<option <?php selected( 'h5', $instance['element']); ?> value="h5">
-						<?php _e( 'H5', 'wp-delicious-wishlist' ); ?>
+						<?php _e( 'H5', 'delicious-wishlist-for-wordpress' ); ?>
 					</option>
 					<option <?php selected( 'div', $instance['element']); ?> value="div">
-						<?php _e( 'DIV', 'wp-delicious-wishlist' ); ?>
+						<?php _e( 'DIV', 'delicious-wishlist-for-wordpress' ); ?>
 					</option>
 					<option <?php selected( 'span', $instance['element']); ?> value="span">
-						<?php _e( 'SPAN', 'wp-delicious-wishlist' ); ?>
+						<?php _e( 'SPAN', 'delicious-wishlist-for-wordpress' ); ?>
 					</option>
 				</select>
 			</p>
 			<p>
 				<input class="checkbox" type="checkbox" <?php checked( $random ); ?> value="1" id="<?php echo $this->get_field_id( 'random' ); ?>" name="<?php echo $this->get_field_name( 'random' ); ?>" />
 				<label for="<?php echo $this->get_field_id( 'random' ); ?>">
-					<?php _e('Pick up random items', 'wp-delicious-wishlist'); ?>
+					<?php _e('Pick up random items', 'delicious-wishlist-for-wordpress'); ?>
 				</label>
 			</p>
 			<p>
 				<input class="checkbox" type="checkbox" <?php checked( $date ); ?> value="1" id="<?php echo $this->get_field_id( 'date' ); ?>" name="<?php echo $this->get_field_name( 'date' ); ?>" />
 				<label for="<?php echo $this->get_field_id( 'date' ); ?>">
-					<?php _e('Display date', 'wp-delicious-wishlist'); ?>
+					<?php _e('Display date', 'delicious-wishlist-for-wordpress'); ?>
 				</label>
 			</p>
 			<p>
 				<input class="checkbox" type="checkbox" <?php checked( $tags ); ?> value="1" id="<?php echo $this->get_field_id( 'tags' ); ?>" name="<?php echo $this->get_field_name( 'tags' ); ?>" />
 				<label for="<?php echo $this->get_field_id( 'tags' ); ?>">
-					<?php _e('Display tags', 'wp-delicious-wishlist'); ?>
+					<?php _e('Display tags', 'delicious-wishlist-for-wordpress'); ?>
 				</label>
 			</p>
 			<p>
 				<input class="checkbox" type="checkbox" <?php checked( $section ); ?> value="1" id="<?php echo $this->get_field_id( 'section' ); ?>" name="<?php echo $this->get_field_name( 'section' ); ?>" />
 				<label for="<?php echo $this->get_field_id( 'section' ); ?>">
-					<?php _e('Display section', 'wp-delicious-wishlist'); ?>
+					<?php _e('Display section', 'delicious-wishlist-for-wordpress'); ?>
 				</label>
 			</p>
 			<p>
 				<input class="checkbox" type="checkbox" <?php checked( $backlink ); ?> value="1" id="<?php echo $this->get_field_id( 'backlink' ); ?>" name="<?php echo $this->get_field_name( 'backlink' ); ?>" />
 				<label for="<?php echo $this->get_field_id( 'backlink' ); ?>">
-					<?php _e('Link to the author', 'wp-delicious-wishlist'); ?>
+					<?php _e('Link to the author', 'delicious-wishlist-for-wordpress'); ?>
 				</label>
 			</p>
 		<?php
@@ -836,11 +838,11 @@ function wp_delicious_wishlist_stylesheets() {
 	$wdws = (array) get_option( 'wdw_options' );
 	if ( isset( $wdws['wdw_css'] ) ) {
 		if ( file_exists( TEMPLATEPATH . '/wdw.css' ) ) {
-			wp_register_style( 'wp-delicious-wishlist', get_stylesheet_directory_uri() . '/wdw.css' );
-			wp_enqueue_style( 'wp-delicious-wishlist');
+			wp_register_style( 'delicious-wishlist-for-wordpress', get_stylesheet_directory_uri() . '/wdw.css' );
+			wp_enqueue_style( 'delicious-wishlist-for-wordpress');
 		} else {
-			wp_register_style( 'wp-delicious-wishlist', plugin_dir_url( __FILE__ ) . '/wdw.css' );
-			wp_enqueue_style( 'wp-delicious-wishlist');
+			wp_register_style( 'delicious-wishlist-for-wordpress', plugin_dir_url( __FILE__ ) . '/wdw.css' );
+			wp_enqueue_style( 'delicious-wishlist-for-wordpress');
 		}
 	}
 }
@@ -855,7 +857,7 @@ add_action( 'wp_print_styles', 'wp_delicious_wishlist_stylesheets' );
  */
 
 function wdw_load_languages() {
-	load_plugin_textdomain( 'wp-delicious-wishlist', false, dirname( plugin_basename( __FILE__ ) ) . '/languages');
+	load_plugin_textdomain( 'delicious-wishlist-for-wordpress', false, dirname( plugin_basename( __FILE__ ) ) . '/languages');
 }
 
 add_action( 'plugins_loaded', 'wdw_load_languages' );
