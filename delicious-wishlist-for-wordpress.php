@@ -5,7 +5,7 @@
 	Plugin URI: http://dev.aldolat.it/projects/delicious-wishlist-for-wordpress/
 	Author: Aldo Latino
 	Author URI: http://www.aldolat.it/
-	Version: 2.6.2
+	Version: 2.6.3
 	Text Domain: delicious-wishlist-for-wordpress
 	Domain Path: /languages/
 	License: GPLv3 or later
@@ -28,7 +28,7 @@
     along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-define( 'WDW_VERSION', '2.6.2' );
+define( 'WDW_VERSION', '2.6.3' );
 
 /**
  * Preliminary actions for creating the settings group into the database
@@ -222,10 +222,10 @@ function wdw_fetch_bookmarks( $args ) {
 
 		// Build an array of items
 		if ( in_the_loop() ) {
-			$wdw_items = $wdw_rss->get_items( 0, $num_items );
+			$wdw_items = $wdw_rss->get_items( 1, $num_items );
 		} else {
 			// If not in the loop (i.e. in the sidebar widget), take the number of items I set up for the widget
-			$wdw_items = $wdw_rss->get_items( 0, $widget_maxitems );
+			$wdw_items = $wdw_rss->get_items( 1, $widget_maxitems );
 		}
 
 		// Build the subtitles
@@ -254,7 +254,7 @@ function wdw_fetch_bookmarks( $args ) {
 				$wdw_wishlist .= '</' . $widget_element . '>';
 			}
 		}
-		
+
 		if ( isset( $wdw_wishlist ) ) {
 			$wdw_wishlist .= '<ul class="wishlist">';
 		} else {
