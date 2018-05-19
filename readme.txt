@@ -21,6 +21,10 @@ one general to collect all your bookmarks relative to your wishlist, and another
 When you are done with an item (you have bought it or someone gave it to you as a gift), you can edit that bookmark on Delicious and remove the star(s).
 Leave only the main tag (e.g., `wishlist`), so you can maintain in Delicious an archive of all desired items.
 
+**Privacy Policy**
+
+This plugin does not collect any user data.
+
 == Installation ==
 
 This section describes how to install the plugin and get it working.
